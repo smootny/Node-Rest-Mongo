@@ -2,19 +2,35 @@
     margin: 1rem 0;
 }
 
-.form-control label,
-.form-control input {
+.form-control label {
     display: block;
     width: 100%;
     margin-bottom: 0.25rem;
+    color: white;
 }
 
-.form-control input {
-    border: 1px solid #a1a1a1;
+.form-control input,
+.form-control textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25rem;
     font: inherit;
-    border-radius: 2px;
-}
-
-.form-control input:focus {
-    outline-color: #00695c;
-}
+    padding: 0.75rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .form-control input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .form-control input:focus,
+  .form-control textarea:focus {
+    outline: none;
+    border-color: #ffeb3b;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+  }
+  
